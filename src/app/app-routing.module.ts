@@ -5,6 +5,18 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./becn/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'proplus',
+    loadChildren: () => import('./proplus/proplus.module').then( m => m.ProplusPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   }
 ];
 @NgModule({
